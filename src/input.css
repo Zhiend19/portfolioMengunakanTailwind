@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom body */
+body {
+    font-family: 'Edu SA Beginner', cursive, 'Inter';
+    background-color: rgb(226 232 240);
+}
+
+/* navbar vixed */
+.navbar-vixed{
+    @apply fixed z-[999] bg-slate-200 bg-opacity-70;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2)
+}
+
+/* garis hamburger */
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-cyan;
+}
+
+/* rotasi hamburger jadi x */
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
+}
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+/* animasi landing page */
+.animated-section {
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
